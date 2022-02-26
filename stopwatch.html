@@ -56,7 +56,7 @@
   <body> 
     <div id="main" >  
       <div id="pcontainer" > 
-          <p class="clock">0</p> 
+          <p class="clock">0 : 0 : 0</p> 
     </div>
     
    <div div id="break"> </div>
@@ -68,13 +68,20 @@
 </body>
     <script>
         let ob;
-        let cnt=0;
+        let cnt=0,hr=0,min=0;
         const clk=document.getElementsByClassName('clock');
       function displayTime() {
         
          cnt+=1;
          console.log(cnt);
-        clk[0].textContent=`${cnt}`;
+         if(cnt==0)
+         {
+           hr=0;
+           min=0;
+         }
+         hr=Math.floor(cnt/3600);
+         min=Math.floor(cnt/60);
+        clk[0].textContent=`${hr} : ${min} : ${cnt}`;
       }
 
       
