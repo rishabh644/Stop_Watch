@@ -1,2 +1,2 @@
 # Stop_Watch
-<img src="Capture.JPG" />
+<img src="screenshot.JPG" />
